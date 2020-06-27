@@ -55,7 +55,19 @@ server.post("/savepoint", (req, res) => {
             req.body.city,
             req.body.items
         ]
-    
+        
+        const altImgLink = "https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+        
+        const altValues = [
+            altImgLink,
+            req.body.name,
+            req.body.address,
+            req.body.address2,
+            req.body.state,
+            req.body.city,
+            req.body.items
+        ]
+
         function afterInsertData(err) {
             if(err) {
                 console.log(err);
@@ -67,9 +79,12 @@ server.post("/savepoint", (req, res) => {
 
             return res.render("create-point.html", {saved: true})
         }
-    
-        db.run(query, values, afterInsertData)
-    
+
+        if(values[0] == "") {
+            db.run(query, altValues, afterInsertData)
+        } else {
+            db.run(query, values, afterInsertData)
+        }
 })
 
 server.get("/search", (req, res) => {

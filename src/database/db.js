@@ -6,6 +6,16 @@ const db = new sqlite3.Database("./src/database/database.db")
 
 module.exports = db
 
+/* db.serialize(() => {
+    db.run(`DELETE FROM places`, function(err){
+        if(err) {
+            return console.log(err);
+        }
+
+        console.log("Dados deletados com sucesso!");
+    })
+}) */
+
 // utilizar o objeto de banco de dados para operações
 /* db.serialize(() => {
     // criar uma tabela com comandos SQL
