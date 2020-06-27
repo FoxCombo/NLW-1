@@ -176,6 +176,14 @@ main .cards {
     gap: 24px;
 }
 
+main .card {
+    border-radius: 8px;
+}
+
+main .card:hover {
+    background-color: #E1FAEC;
+}
+
 main .card img {
     width: 100%;
     object-fit: cover;
@@ -188,6 +196,7 @@ main .card h1 {
     font-size: 36px;
     line-height: 41px;
     color: #322153;
+    padding: 5px;
 }
 
 main .card h3 {
@@ -197,10 +206,12 @@ main .card h3 {
     line-height: 34px;
     color: var(--primary-color);
     margin: 24px 0;
+    padding: 5px;
 }
 
 main .card p {
     font-size: 16px;
     line-height: 26px;
     color: #6C6C80;
+    padding: 5px;
 }
