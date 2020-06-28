@@ -56,7 +56,7 @@ server.post("/savepoint", (req, res) => {
             req.body.items
         ]
         
-        const altImgLink = "https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+        const altImgLink = "https://images.unsplash.com/photo-1558583082-409143c794ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
         
         const altValues = [
             altImgLink,
