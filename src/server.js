@@ -90,8 +90,9 @@ server.post("/savepoint", (req, res) => {
 server.get("/search", (req, res) => {
 
     const search = req.query.search
+    const search2 = req.query.search2
 
-    if(search === "") {
+    if(search === "" && search2 == "") {
         db.all(`SELECT * FROM places`, function(err, rows) {
             if(err) {
                 return console.log(err);
@@ -99,6 +100,30 @@ server.get("/search", (req, res) => {
     
             const total = rows.length
     
+            // mostrar a página HTML com os dados do banco de dados
+            return res.render("search-results.html", { places: rows, total })
+        })
+    } else if(search != "" && search2 == "") {
+        // pegar os dados do banco de dados
+        db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, rows) {
+            if(err) {
+                return console.log(err);
+            }
+
+            const total = rows.length
+
+            // mostrar a página HTML com os dados do banco de dados
+            return res.render("search-results.html", { places: rows, total })
+        })
+    } else if(search == "" && search2 != "") {
+        // pegar os dados do banco de dados
+        db.all(`SELECT * FROM places WHERE state LIKE '%${search2}%'`, function(err, rows) {
+            if(err) {
+                return console.log(err);
+            }
+
+            const total = rows.length
+
             // mostrar a página HTML com os dados do banco de dados
             return res.render("search-results.html", { places: rows, total })
         })
