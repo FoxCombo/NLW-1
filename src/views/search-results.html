@@ -2,6 +2,10 @@
 
 {% set pageId = "page-search-results" %}
 
+{% block meta %}
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock meta %}
+
 {% block title %}
     <title>Ecoleta - Resultado da Pesquisa.</title>
 {% endblock title %}
@@ -9,6 +13,7 @@
 {% block styles %}
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/search-results.css">
+    {# <link rel="stylesheet" href="/styles/star-rating.css"> #}
 {% endblock styles %}
 
 {% block content %}
@@ -52,10 +57,8 @@
                     <a href="#"><div class="card">
                         <img src="{{ place.image }}" alt="{{ place.name }}">
                         <h1>{{ place.name }}</h1>
-                        
+                        {# <input type="hidden" name="stars"> #}
                         <h3>{{ place.items | replace(",", " - ") }}</h3>
-
-
                         <p>
                             {{ place.city }}, {{ place.state }}
                             <br/>
@@ -77,3 +80,7 @@
 
     </main>
 {% endblock content %}
+
+{% block scripts %}
+    {# <script src="/scripts/search-results.js"></script> #}
+{% endblock scripts %}
