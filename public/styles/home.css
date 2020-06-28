@@ -31,6 +31,7 @@
     margin-right: 16px;
     display: flex;
     background-image: url('../assets/icones/log-in.svg');
+    background-repeat: no-repeat;
     width: 20px;
     height: 20px;
 }

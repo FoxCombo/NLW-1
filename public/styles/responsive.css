@@ -58,6 +58,32 @@
 }
 
 @media (max-width: 760px) {
+    #page-home main {
+        flex: 0.8;
+    }
+    
+    #page-home main h1 {
+        font-size: 36px;
+    }
+
+    #page-home main p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    
+    #page-home header a {
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #page-home header a span {
+        margin-right: 8px;
+        width: 28px;
+        align-self: center;
+    }
+
     #page-create-point .items-grid {
         grid-template-columns: 1fr;
     }
@@ -71,6 +97,10 @@
         margin-top: 6px;
     }
 
+    #page-create-point form {
+        padding: 32px;
+    }
+
     #page-create-point form button{
         display: grid;
         flex-direction: column;
@@ -79,5 +109,9 @@
         height: 64px;
         font-size: 16px;
         padding: 0;
+    }
+
+    #modal .content {
+        padding: 0px 20px;
     }
 }
