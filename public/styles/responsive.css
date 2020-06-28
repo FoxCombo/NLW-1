@@ -57,6 +57,29 @@
     }
 }
 
+@media (min-width: 761px) {
+    #page-home main {
+        flex: 0.9;
+    }
+    
+    #page-home main h1 {
+        font-size: 46px;
+    }
+
+    #page-home main p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    #page-home main a {
+        margin-top: 28px;
+    }
+    
+    #page-home header a {
+        bottom: 5%;
+    }
+}
+
 @media (max-width: 760px) {
     #page-home main {
         flex: 0.8;
@@ -73,7 +96,7 @@
     
     #page-home header a {
         position: absolute;
-        bottom: 48px;
+        bottom: 10%;
         left: 50%;
         transform: translateX(-50%);
     }
