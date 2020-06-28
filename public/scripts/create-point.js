@@ -84,7 +84,7 @@ function handleSelectetItem(event) {
         selectedItems.push(itemId)
     }
 
-    // console.log("SelectedItems: ", selectedItems);
+    console.log("SelectedItems: ", selectedItems);
     // atualizar o input hidden com os itens
     collectedItems.value = selectedItems
 
