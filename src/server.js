@@ -129,7 +129,7 @@ server.get("/search", (req, res) => {
         })
     } else {
         // pegar os dados do banco de dados
-        db.all(`SELECT * FROM places WHERE city LIKE '%${search}%' ORDER BY name`, function(err, rows) {
+        db.all(`SELECT * FROM places WHERE city LIKE '%${search}%' AND state LIKE '%${search2}%' ORDER BY name`, function(err, rows) {
             if(err) {
                 return console.log(err);
             }
