@@ -89,8 +89,8 @@ server.post("/savepoint", (req, res) => {
 
 server.get("/search", (req, res) => {
 
-    const search = req.query.search
-    const search2 = req.query.search2
+    const search = req.query.searchByCity
+    const search2 = req.query.searchByState
 
     if(search === "" && search2 == "") {
         db.all(`SELECT * FROM places ORDER BY name`, function(err, rows) {

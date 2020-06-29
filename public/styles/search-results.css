@@ -178,6 +178,7 @@ main .cards {
 
 main .card {
     border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 main .card:hover {
@@ -192,7 +193,7 @@ main .card img {
 }
 
 main .card h1 {
-    margin-top: 32px;
+    margin-top: 16px;
     font-size: 36px;
     line-height: 41px;
     color: #322153;
