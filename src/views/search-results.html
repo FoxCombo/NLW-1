@@ -13,7 +13,6 @@
 {% block styles %}
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/search-results.css">
-    {# <link rel="stylesheet" href="/styles/star-rating.css"> #}
 {% endblock styles %}
 
 {% block content %}
@@ -54,7 +53,7 @@
             <div class="cards">
 
                 {% for place in places %}
-                    <a href="#"><div class="card">
+                    <a href="https://www.google.com.br/maps/place/{{ place.address }}+{{ place.city }}" target="_blank"><div class="card">
                         <img src="{{ place.image }}" alt="{{ place.name }}">
                         <h1>{{ place.name }}</h1>
                         {# <input type="hidden" name="stars"> #}
@@ -80,7 +79,3 @@
 
     </main>
 {% endblock content %}
-
-{% block scripts %}
-    {# <script src="/scripts/search-results.js"></script> #}
-{% endblock scripts %}
