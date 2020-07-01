@@ -29,7 +29,7 @@
             <div class="cards">
 
                 {% for place in places %}
-                    <a href="#"><div class="card">
+                    <a href="https://www.google.com.br/maps/place/{{ place.address }}+{{ place.city }}" target="_blank"><div class="card">
                         <img src="{{ place.image }}" alt="{{ place.name }}">
                         <h1>{{ place.name }}</h1>
                         <h3>{{ place.items }}</h3>
