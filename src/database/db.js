@@ -6,8 +6,8 @@ const db = new sqlite3.Database("./src/database/database.db")
 
 module.exports = db
 
-/* // consultar dados da tabela por id
-const id = 17
+// consultar dados da tabela por id
+/* const id = 19
 
 function tableConsult() {
     db.all(`SELECT * FROM places WHERE id = ${id}`, function(err, rows) {
@@ -18,9 +18,11 @@ function tableConsult() {
         console.log("Aqui estão seus registros: ");
         console.log(rows);
     })
-}
+} */
 
-const imgLink = "https://images.unsplash.com/photo-1561158318-83210510d944?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+
+
+/* const imgLink = "https://images.unsplash.com/photo-1561158318-83210510d944?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
 
 function imgUpdate() {
     db.all(`UPDATE places SET image = '${imgLink}' WHERE id = ${id}`, function(err, rows) {
@@ -30,8 +32,8 @@ function imgUpdate() {
 
         console.log(rows);
     })
-}
- */
+} */
+
 /* db.serialize(() => {
     db.run(`DELETE FROM places`, function(err){
         if(err) {

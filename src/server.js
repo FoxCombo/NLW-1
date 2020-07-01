@@ -92,7 +92,7 @@ server.get("/search", (req, res) => {
     const search = req.query.searchByCity
     const search2 = req.query.searchByState
 
-    if(search === "" && search2 == "") {
+    if(search === "" && search2 === "") {
         db.all(`SELECT * FROM places ORDER BY name`, function(err, rows) {
             if(err) {
                 return console.log(err);
@@ -103,7 +103,7 @@ server.get("/search", (req, res) => {
             // mostrar a página HTML com os dados do banco de dados
             return res.render("search-results.html", { places: rows, total })
         })
-    } else if(search != "" && search2 == "") {
+    } else if(search != "" && search2 === "") {
         // pegar os dados do banco de dados
         db.all(`SELECT * FROM places WHERE city LIKE '%${search}%' ORDER BY name`, function(err, rows) {
             if(err) {
@@ -115,7 +115,7 @@ server.get("/search", (req, res) => {
             // mostrar a página HTML com os dados do banco de dados
             return res.render("search-results.html", { places: rows, total })
         })
-    } else if(search == "" && search2 != "") {
+    } else if(search === "" && search2 != "") {
         // pegar os dados do banco de dados
         db.all(`SELECT * FROM places WHERE state LIKE '%${search2}%' ORDER BY name`, function(err, rows) {
             if(err) {
@@ -142,6 +142,8 @@ server.get("/search", (req, res) => {
     }
     
 })
+
+
 
 // ligar o servidor
 server.listen(3000)

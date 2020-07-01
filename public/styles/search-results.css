@@ -217,3 +217,7 @@ main .card p {
     padding: 5px;
     margin-top: -5px;
 }
+
+main .card .id-tag {
+    display: none;
+}
